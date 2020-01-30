@@ -273,7 +273,7 @@ class DiagramModel(object):
         self._state = EMB_PREDICTED_STATE
         return self._embeddings
 
-    def save(self, emb_path=None, weight_path=False):
+    def save(self, emb_path=None, weight_path=None):
         """
         Saves the model parameters
 
@@ -352,7 +352,7 @@ class DiagramModel(object):
 class NodeModel(DiagramModel):
 
     def __init__(self, options, adj, features=None):
-        super().__init__(adj=adj, features=features, options=options)
+        super(NodeModel, self).__init__(options=options, adj=adj, features=features)
         self._node_data = np.arange(self._adj.shape[0])
 
     def _build_inputs(self):
@@ -431,7 +431,7 @@ class NodeModel(DiagramModel):
 class EdgeModel(DiagramModel):
 
     def __init__(self, options, adj, features=None, transferred_weights=None):
-        super().__init__(adj=adj, features=features, options=options, transferred_weights=transferred_weights)
+        super(EdgeModel, self).__init__(adj=adj, features=features, options=options, transferred_weights=transferred_weights)
         self._sources, self._targets = self._adj.nonzero()
 
     def _build_inputs(self):

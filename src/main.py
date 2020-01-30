@@ -11,9 +11,9 @@ import model
 def parse_args():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--n-file', type=str, help='Path to a graph file')
+    parser.add_argument('--n-file', default='../data/cora/graph.txt', type=str, help='Path to a graph file')
     parser.add_argument('--n-fmt', type=str, default='edgelist', help='Format of the graph file. Right now edge list')
-    parser.add_argument('--f-file', type=str, help='Path to node features file')
+    parser.add_argument('--f-file', default='../data/cora/feature.txt', type=str, help='Path to node features file')
     parser.add_argument('--f-fmt', type=str, default='mat-txt',
                         help='Format of the features file, currently only text matrix file')
     parser.add_argument('--nm-file', type=str, default='nm_model.npz',
@@ -79,3 +79,7 @@ def main():
                                  transferred_weights=node_model.get_learned_weights())
     edge_model.train(epochs=1)
     edge_model.save(args.em_file)
+
+    
+if __name__ == '__main__':
+    main()
