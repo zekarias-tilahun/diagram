@@ -16,7 +16,7 @@ $ cd src
 $ python main.py
 ```
 
-Or
+#### Or
 
 A Sample execution along with the node classification evaluation is given in the jupyter  notebook file under the src directory.
 
