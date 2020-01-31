@@ -13,8 +13,6 @@ def parse_args():
 
     parser.add_argument('--n-file', default='../data/cora/graph.txt', type=str, help='Path to a graph file')
     parser.add_argument('--f-file', default='../data/cora/feature.txt', type=str, help='Path to node features file')
-    parser.add_argument('--f-fmt', type=str, default='mat-txt',
-                        help='Format of the features file, currently only text matrix file')
     parser.add_argument('--nm-file', type=str, default='../data/cora/nm_model.npz',
                         help="A path to save the learned embeddings of Diagram's node model variant")
     parser.add_argument('--em-file', type=str, default='../data/cora/em_model.npz',

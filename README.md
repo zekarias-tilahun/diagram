@@ -1,5 +1,5 @@
 # Diagram
-A simple implementation of the paper "Which way? Direction-Aware Attributed Graph Embedding"
+A simple implementation of the paper "Which way? Direction-Aware Attributed Graph Embedding" (https://arxiv.org/abs/2001.11297) presented at the GEM: Graph Embedding and Mining workshop collocated with ECML-PKDD 2019 conference.
 
 ### Requirements
 
@@ -37,10 +37,12 @@ Citing
 ------
 
 ```
-@inproceedings{GEMKefato2019,
-  booktitle="GEM: Graph Embedding and Mining workshop",
-	author = {Kefato, Zekarias T. and Sheikh, Nasrullah and Montresor, Alberto},
-	title = "Which way? Direction-Aware Attributed Graph Embedding",
-	year = 2019,
+@inproceedings{kefato2020way,
+    title={Which way? Direction-Aware Attributed Graph Embedding},
+    author={Zekarias T. Kefato and Nasrullah Sheikh and Alberto Montresor},
+    year={2020},
+    eprint={2001.11297},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
 }
 ```
